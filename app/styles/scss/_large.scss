@@ -1,0 +1,44 @@
+// ---------------- BODY ---------------------
+ // remove header/footer/nav from below to have full-width headers and footers
+ header, nav, main, footer {max-width: 60rem; margin: 0 auto} // auto centers
+
+body {
+    background-image: url(../images/background.jpg) no-repeat center top;
+    padding: 1rem 0; // move header and footer from top/bottom of browswer
+}
+
+// ------------------ NAVIGATION -----------------
+nav {
+    ul {
+        margin-left: $gutter;
+        border-left: 1px solid rgba(0,0,0,0.3);
+    }
+    ul li {width: auto;} // crams menu to left
+
+    ul li:last-child{border-right: 1px solid rgba(0,0,0,0.3);}
+
+    ul li a {
+        padding: .5rem 1rem;
+    }
+}
+
+
+//  ------------- MAIN -------------------------------
+
+main {
+    figure.photo {width: 25% - $gutterdbl; margin: 5rem $gutter; float: left;}
+
+    div.blog article {
+        float:left;
+        width: 33.33% - $gutterdbl;
+    }
+
+    //  only talking to nth child, not whole article
+    // 2n = second (even numbers)
+    // offset by 1 for odd numbers
+    // odd numbers clear left, even numbers clear right regardless of their size
+    div.blog article:nth-child(2n + 1) {clear: none;} // end blog
+    div.blog article:nth-child(3n + 1) {clear: left;} // end blog
+
+    section {max-width: 60rem; margin: 0 auto;}
+}

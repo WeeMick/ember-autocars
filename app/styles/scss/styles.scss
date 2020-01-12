@@ -1,0 +1,16 @@
+@import "reset";
+
+@import "variables";
+
+@import "small-default";
+
+@media only screen and (min-width: 35rem) {
+  @import "medium";   
+} // end media query
+
+// 60 * 16 = 960 pixels (breakpoint
+// 16 is base-font 1 rem#
+// using rem for breakpoints is good as it allows you to zoom in on a webpage to see a large version of how your site will look on a small screen - breakpoints have enlarged as the base font has enlarged
+@media only screen and (min-width: 60rem) {
+    @import "large";
+} // end media query
